@@ -14,7 +14,7 @@ import (
 		student1 := Student{
 			Name:  "Mursi",
 			school: "University of Science and Technology",
-			year:  2024,
+			year: 2024,
 		}
 
 		fmt.Println("tudent informaition")
