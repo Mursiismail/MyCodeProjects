@@ -1,7 +1,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 ) 
 
 	type Employee struct {
@@ -16,6 +18,7 @@ import (
 		var pers1 Employee
 		var pers2 Employee
 		var pers3 Employee
+		var pers4 Employee
 
 	
 
@@ -34,9 +37,26 @@ import (
 	pers3.job = "Product Manager"
 	pers3.salary = 70000	
 
+
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Enter employee name: ")
+	pers4.name, _ := reader.ReadString('\n')
+	fmt.Print("Enter employee age: ")
+	pers4.age, _ := reader.ReadString('\n')
+	fmt.Print("Enter employee job: ")
+	pers4.job, _ := reader.ReadString('\n')
+	fmt.Print("Enter employee salary: ")
+
+
+
+
 	PrintPerson(pers1)
 	PrintPerson(pers2)
 	PrintPerson(pers3)
+	PrintPerson(pers4)
+
+
+
 	}
 	
 
@@ -47,5 +67,7 @@ import (
 		fmt.Println("Salary: ", pers.salary)
 		fmt.Println("---------------------")
 	}
+
+	
 
 
